@@ -31,8 +31,8 @@ export default function Main() {
   const [userGameItem, setUserGameItem] = useState(null);
   const [computerGameItem, setComputerGameItem] = useState(null);
 
-  const handleGameItemChange = (gameItem) => {
-    setUserGameItem({ ...gameItem });
+  const handleGameItemChange = (gameItems) => {
+    setUserGameItem({...gameItems});
   };
 
   useEffect(() => {
@@ -44,7 +44,7 @@ export default function Main() {
   }, [userGameItem]);
 
   return (
-    <div className="conainer">
+    <div className="container">
       <div className="main">
         <Result
           user1GameItem={userGameItem}
